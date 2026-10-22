@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Velora Car Care</title>
+    <meta name="description" content="Contact Velora Car Care for premium car wash, detailing, maintenance and inspection services." />
+    <script>
+      (function () {
+        var lang = localStorage.getItem("site-lang") || "en";
+        document.documentElement.setAttribute("lang", lang);
+        document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link id="bootstrapCss" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body data-page="contact">
+    <header class="topbar contact-topbar" id="topbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand brand" href="index.html#home" aria-label="Velora home"><span class="brand-mark">V</span><span>VELORA</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#home" data-i18n="nav_home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#about" data-i18n="nav_about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#kpi" data-i18n="nav_stats">Stats</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#comparison" data-i18n="nav_comparison">Before &amp; After</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#services" data-i18n="nav_services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#benefits" data-i18n="nav_benefits">Benefits</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#reviews" data-i18n="nav_reviews">Reviews</a></li>
+              <li class="nav-item"><a class="nav-link active" href="contact.html" data-i18n="nav_contact" aria-current="page">Contact</a></li>
+              <li class="nav-item ms-lg-3"><button type="button" class="lang-toggle" aria-label="Change language"><span class="lang-toggle-label">العربية</span></button></li>
+              <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="booking.html" data-i18n="nav_book">Book Now</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <div class="container">
+        <section class="contact-hero" aria-labelledby="contactTitle">
+          <div class="contact-hero-content">
+            <div class="contact-panel">
+              <span class="eyebrow" data-i18n="contact_eyebrow">Contact Us</span>
+              <h1 id="contactTitle" data-i18n="contact_title">We are here for your vehicle.</h1>
+              <p data-i18n="contact_desc">Need a trusted car care partner? Reach out anytime and we will help you choose the right service for your vehicle.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-wrap" aria-label="Contact options">
+          <div class="row g-4">
+            <div class="col-md-4"><article class="contact-card"><h3 data-i18n="contact_card1_title">WhatsApp</h3><p data-i18n="contact_card1_desc">Quickly chat with our team for service availability, pricing, and support.</p><a class="contact-link" href="https://wa.me/201017437945" target="_blank" rel="noopener" data-i18n="contact_card1_link">Chat on WhatsApp</a></article></div>
+            <div class="col-md-4"><article class="contact-card"><h3 data-i18n="contact_card2_title">Phone Call</h3><p data-i18n="contact_card2_desc">Speak directly with our team for fast booking and assistance.</p><a class="contact-link alt" href="tel:+201017437945" data-i18n="contact_card2_link">Call Now</a></article></div>
+            <div class="col-md-4"><article class="contact-card"><h3 data-i18n="contact_card3_title">Email</h3><p data-i18n="contact_card3_desc">Send your inquiry and we will contact you as soon as possible.</p><a class="contact-link" href="mailto:mahma123789@gmail.com" data-i18n="contact_card3_link">Email Us</a></article></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4"><div class="footer-brand"><a class="brand" href="index.html#home"><span class="brand-mark">V</span><span>VELORA</span></a><p data-i18n="footer_desc">Premium care for modern drivers — from deep cleaning to intelligent maintenance and mechanical peace of mind.</p></div></div>
+          <div class="col-lg-2"><h4 data-i18n="footer_quicklinks">Quick Links</h4><ul><li><a href="index.html#home" data-i18n="nav_home">Home</a></li><li><a href="index.html#about" data-i18n="nav_about">About</a></li><li><a href="index.html#services" data-i18n="nav_services">Services</a></li><li><a href="contact.html" data-i18n="nav_contact">Contact</a></li></ul></div>
+          <div class="col-lg-3"><h4 data-i18n="footer_services_heading">Services</h4><ul><li data-i18n="footer_service1">Exterior Cleaning</li><li data-i18n="footer_service2">Interior Cleaning</li><li data-i18n="footer_service3">Oil Change</li><li data-i18n="footer_service4">Electrical Repair</li><li data-i18n="footer_service5">Pre-Sale Inspection</li></ul></div>
+          <div class="col-lg-3"><h4 data-i18n="footer_contact_heading">Contact</h4><ul><li><a href="tel:+201017437945">+20 (0) 101 7437945</a></li><li><a href="mailto:mahma123789@gmail.com">mahma123789@gmail.com</a></li><li data-i18n="footer_address">Obour City, Egypt</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p data-i18n="footer_copyright">© 2026 Velora Car Care. All rights reserved.</p></div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Service | Velora</title>
+    <script>
+      (function () {
+        var lang = localStorage.getItem("site-lang") || "en";
+        document.documentElement.setAttribute("lang", lang);
+        document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      id="bootstrapCss"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body data-page="booking">
+    <header class="booking-topbar">
+      <div class="container booking-topbar-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">V</span>
+          <span>VELORA</span>
+        </a>
+        <button type="button" class="lang-toggle" aria-label="Change language">
+          <span class="lang-toggle-label">العربية</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="booking-page">
+      <div class="container">
+        <div class="booking-shell row">
+          <div class="col-lg-7 booking-panel">
+            <div class="booking-header">
+              <span class="eyebrow" data-i18n="booking_eyebrow">Booking</span>
+              <h1 data-i18n="booking_title">Reserve your service</h1>
+              <p data-i18n="booking_desc">Complete your details and confirm your appointment.</p>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+              <div class="form-field">
+                <label for="phone" data-i18n="label_phone">Customer Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="+201017437945" required />
+              </div>
+
+              <div class="form-field">
+                <label for="plate" data-i18n="label_plate">Car Number / Plate Number</label>
+                <input id="plate" name="plate" type="text" placeholder="ABC 1234" required />
+              </div>
+
+              <div class="form-field">
+                <label for="carType" data-i18n="label_cartype">Car Type</label>
+                <select id="carType" name="carType" required>
+                  <option value="" data-i18n="option_select_cartype">Select Car Type</option>
+                  <option value="Sedan" data-i18n="option_sedan">Sedan</option>
+                  <option value="SUV" data-i18n="option_suv">SUV</option>
+                  <option value="Sports Car" data-i18n="option_sports">Sports Car</option>
+                  <option value="Luxury" data-i18n="option_luxury">Luxury</option>
+                  <option value="Truck" data-i18n="option_truck">Truck</option>
+                  <option value="Other" data-i18n="option_other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="name" data-i18n="label_name">Customer Name</label>
+                <input id="name" name="name" type="text" placeholder="Full name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="mileage" data-i18n="label_mileage">Vehicle Mileage / KM</label>
+                <input id="mileage" name="mileage" type="number" placeholder="12000" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="bookingDate" data-i18n="label_date">Booking Date</label>
+                  <input id="bookingDate" name="bookingDate" type="date" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="bookingTime" data-i18n="label_time">Booking Time</label>
+                  <input id="bookingTime" name="bookingTime" type="time" required />
+                </div>
+              </div>
+
+              <div class="booking-actions">
+                <button type="submit" class="btn btn-primary" data-i18n="btn_confirm">Confirm Booking</button>
+                <button type="button" class="btn btn-outline" id="backToServices" data-i18n="btn_back">Back to Services</button>
+              </div>
+            </form>
+
+            <div class="booking-message" id="bookingMessage" role="alert"></div>
+            <div class="existing-customer-notice" id="existingCustomerNotice" role="alert"></div>
+            <div class="success-box" id="successSummary">
+              <h3 data-i18n="booking_summary_title">Booking Summary</h3>
+              <p data-i18n="booking_summary_desc">Submit your form to receive a queue number.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-5 booking-summary">
+            <img
+              class="booking-summary-image"
+              src="image/book2.jpg"
+              alt="Professional car detailing"
+            />
+            <h3 data-i18n="selected_services_title">Selected Services</h3>
+            <div class="service-list" id="selectedServicesList"></div>
+            <div class="summary-total">
+              <span data-i18n="summary_total">Total</span>
+              <strong id="bookingTotal">$0</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-modal" id="successModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="success-icon">✓</div>
+            <h2 data-i18n="modal_success_title">Your booking has been registered successfully.</h2>
+            <p id="modalMessage" data-i18n="modal_queue_label">Your queue number is:</p>
+            <div class="modal-details" id="modalDetails"></div>
+            <button class="btn btn-primary" id="modalCloseBtn" data-i18n="modal_go_home">Go to Home</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-modal error" id="existingModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="warning-icon">⚠</div>
+            <h2 data-i18n="modal_error_title">Customer Already Registered</h2>
+            <p id="existingMessage" data-i18n="modal_error_desc">Your data is already registered. Please review your information.</p>
+            <button class="btn btn-primary" id="existingCloseBtn" data-i18n="modal_review_btn">Review Information</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/book.js"></script>
+  </body>
+</html>

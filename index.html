@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velora Car Care</title>
+    <meta
+      name="description"
+      content="Premium car wash and car care service with expert detailing, maintenance, inspection and booking."
+    />
+    <script>
+      (function () {
+        var lang = localStorage.getItem("site-lang") || "en";
+        document.documentElement.setAttribute("lang", lang);
+        document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      id="bootstrapCss"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body data-page="home">
+    <div class="hook-screen" id="hookScreen">
+      <div class="hook-backdrop">
+        <div class="hook-grid">
+          <div class="hook-car">
+            <img
+              src="image/1.avif"
+              alt="Dirty car before wash"
+            />
+          </div>
+          <div class="hook-car">
+            <img
+              src="image/2.avif"
+              alt="Dirty car before wash"
+            />
+          </div>
+          <div class="hook-car">
+            <img
+              src="image/3.avif"
+              alt="Dirty car before wash"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="hook-overlay"></div>
+
+      <div class="hook-logo-wrap">
+        <div class="hook-logo">
+          <span class="brand-mark">V</span>
+          <span>VELORA</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="topbar" id="topbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand brand" href="#home">
+            <span class="brand-mark">V</span>
+            <span>VELORA</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#kpi" data-i18n="nav_stats">Stats</a></li>
+              <li class="nav-item"><a class="nav-link" href="#comparison" data-i18n="nav_comparison">Before & After</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reviews" data-i18n="nav_reviews">Reviews</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+              <li class="nav-item ms-lg-3">
+                <button type="button" class="lang-toggle" aria-label="Change language">
+                  <span class="lang-toggle-label">العربية</span>
+                </button>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a class="btn btn-primary" href="booking.html" data-i18n="nav_book">Book Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <div class="hero-content reveal-left">
+                <span class="eyebrow" data-i18n="hero_eyebrow">Premium Auto Care</span>
+                <h1 data-i18n="hero_title">Luxury car care for every drive.</h1>
+                <p data-i18n="hero_desc">
+                  From deep cleaning and detailing to oil changes, electrical maintenance,
+                  and pre-sale inspections, Velora brings showroom-level care to your vehicle.
+                </p>
+                <div class="hero-buttons">
+                  <a href="#services" class="btn btn-primary" data-i18n="hero_btn_explore">Explore Services</a>
+                  <a href="booking.html" class="btn btn-outline" data-i18n="hero_btn_book">Book a Service</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section-shell">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="about-image reveal-up">
+                <img
+                  src="image/AboutUs.jpg"
+                  alt="Professional car care team"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="about-content reveal-up">
+                <span class="eyebrow" data-i18n="about_eyebrow">About Us</span>
+                <h2 data-i18n="about_title">Detailing expertise with real craftsmanship.</h2>
+                <p data-i18n="about_p1">
+                  Velora is a premium automotive care studio designed for drivers who want
+                  their vehicles to look, feel, and perform at their best. We combine
+                  professional detailing, mechanical care, and customer-focused support in one
+                  trusted environment.
+                </p>
+                <p data-i18n="about_p2">
+                  Our mission is simple: deliver a clean, safe, and confident driving experience
+                  using careful inspections, premium products, and the latest care standards.
+                </p>
+
+                <div class="about-highlights">
+                  <div class="highlight-item">
+                    <h4 data-i18n="about_h1_title">Professional Standard</h4>
+                    <p data-i18n="about_h1_desc">Care routines built around precision and long-lasting results.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <h4 data-i18n="about_h2_title">Customer Care</h4>
+                    <p data-i18n="about_h2_desc">Clear communication, trusted advice, and dependable scheduling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kpi" class="kpi-section section-shell">
+        <div class="container">
+          <div class="section-heading reveal-up">
+            <span class="eyebrow" data-i18n="kpi_eyebrow">Our Impact</span>
+            <h2 data-i18n="kpi_title">Trusted by thousands of drivers.</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="kpi-card reveal-up">
+                <div class="kpi-icon">🚗</div>
+                <div class="kpi-number" data-target="8742">0</div>
+                <div class="kpi-label" data-i18n="kpi_label_cars">Cars Serviced</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="kpi-card reveal-up">
+                <div class="kpi-icon">⭐</div>
+                <div class="kpi-number" data-target="98">0</div>
+                <div class="kpi-label" data-i18n="kpi_label_satisfaction">% Satisfaction</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="kpi-card reveal-up">
+                <div class="kpi-icon">✓</div>
+                <div class="kpi-number" data-target="12500">0</div>
+                <div class="kpi-label" data-i18n="kpi_label_services">Services Completed</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="kpi-card reveal-up">
+                <div class="kpi-icon">🏆</div>
+                <div class="kpi-number" data-target="9">0</div>
+                <div class="kpi-label" data-i18n="kpi_label_years">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparison" class="comparison-section section-shell">
+        <div class="container">
+          <div class="section-heading reveal-up">
+            <span class="eyebrow" data-i18n="comparison_eyebrow">Before & After</span>
+            <h2 data-i18n="comparison_title">See the transformation.</h2>
+          </div>
+
+          <div class="car-selector reveal-up">
+            <button class="car-btn active" data-car="car1" data-i18n="comparison_car1">Car 1</button>
+            <button class="car-btn" data-car="car2" data-i18n="comparison_car2">Car 2</button>
+          </div>
+
+          <div class="comparison-wrapper reveal-up">
+            <div class="comparison-container">
+              <img class="comparison-before" src="" alt="Before cleaning" />
+              <div class="comparison-after-wrapper" id="afterWrapper">
+                <img class="comparison-after" src="" alt="After cleaning" />
+              </div>
+              <div class="comparison-divider" id="divider">
+                <div class="divider-handle">
+                  <span class="handle-arrows">◀ ▶</span>
+                </div>
+              </div>
+              <span class="label-before" data-i18n="comparison_before">Before</span>
+              <span class="label-after" data-i18n="comparison_after">After</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services-section section-shell">
+        <div class="container">
+          <div class="section-heading reveal-up">
+            <span class="eyebrow" data-i18n="services_eyebrow">Services</span>
+            <h2 data-i18n="services_title">Complete care for your vehicle.</h2>
+            <p data-i18n="services_desc">
+              Select one or more services below.
+            </p>
+          </div>
+
+          <div class="services-carousel-wrapper reveal-up">
+            <button class="carousel-control left" id="carouselPrev" type="button" aria-label="Previous service">
+              ❮
+            </button>
+
+            <div class="services-carousel-viewport">
+              <div class="services-carousel" id="servicesCarousel"></div>
+            </div>
+
+            <button class="carousel-control right" id="carouselNext" type="button" aria-label="Next service">
+              ❯
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits-section section-shell">
+        <div class="container">
+          <div class="section-heading reveal-up">
+            <span class="eyebrow" data-i18n="benefits_eyebrow">After Service</span>
+            <h2 data-i18n="benefits_title">Benefits that keep your vehicle in prime condition.</h2>
+          </div>
+
+          <div class="benefit-row reveal-up">
+            <div class="benefit-image">
+              <img
+                src="image/storge.jpg"
+                alt="Vehicle data storage"
+              />
+            </div>
+            <div class="benefit-content">
+              <h3 data-i18n="benefit1_title">Vehicle Data Storage</h3>
+              <p data-i18n="benefit1_desc">
+                Your complete vehicle history is securely stored in our system. We maintain
+                detailed records of every service, repair, and maintenance performed on your car.
+                This makes it easy to track your vehicle's health and access past information
+                whenever you need it.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-row alt reveal-up">
+            <div class="benefit-content">
+              <h3 data-i18n="benefit2_title">Maintenance Reminders</h3>
+              <p data-i18n="benefit2_desc">
+                We keep you informed about your vehicle's maintenance schedule. Our team sends
+                timely reminders about upcoming services, oil changes, inspections, and warranty
+                dates. Never miss an important maintenance deadline again.
+              </p>
+            </div>
+            <div class="benefit-image">
+              <img
+                src="image/customer.jpg"
+                alt="Maintenance reminders"
+              />
+            </div>
+          </div>
+
+          <div class="benefit-row reveal-up">
+            <div class="benefit-image">
+              <img
+                src="image/discount.jpg"
+                alt="Future discounts and rewards"
+              />
+            </div>
+            <div class="benefit-content">
+              <h3 data-i18n="benefit3_title">Future Discounts</h3>
+              <p data-i18n="benefit3_desc">
+                Loyalty matters at Velora. Every service you book earns you rewards and exclusive
+                discounts on future visits. Our valued customers enjoy special pricing, priority
+                scheduling, and access to premium services at reduced rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section section-shell" id="reviews">
+        <div class="container">
+          <div class="section-heading reveal-up">
+            <span class="eyebrow" data-i18n="reviews_eyebrow">Customer Reviews</span>
+            <h2 data-i18n="reviews_title">Trusted by drivers who care about their vehicles.</h2>
+          </div>
+
+          <div class="reviews-slider reveal-up" id="reviewsSlider" tabindex="0" aria-label="Customer reviews">
+            <button class="reviews-arrow reviews-prev" type="button" aria-label="Previous review" data-i18n-aria="reviews_prev">‹</button>
+            <div class="reviews-viewport">
+              <div class="reviews-track" id="reviewsTrack"></div>
+            </div>
+            <button class="reviews-arrow reviews-next" type="button" aria-label="Next review" data-i18n-aria="reviews_next">›</button>
+            <div class="reviews-dots" id="reviewsDots" aria-hidden="false"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="footer-brand">
+              <a class="brand" href="#home">
+                <span class="brand-mark">V</span>
+                <span>VELORA</span>
+              </a>
+              <p data-i18n="footer_desc">
+                Premium care for modern drivers — from deep cleaning to intelligent maintenance
+                and mechanical peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2">
+            <h4 data-i18n="footer_quicklinks">Quick Links</h4>
+            <ul>
+              <li><a href="#home" data-i18n="nav_home">Home</a></li>
+              <li><a href="#about" data-i18n="nav_about">About</a></li>
+              <li><a href="#services" data-i18n="nav_services">Services</a></li>
+              <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h4 data-i18n="footer_services_heading">Services</h4>
+            <ul>
+              <li data-i18n="footer_service1">Exterior Cleaning</li>
+              <li data-i18n="footer_service2">Interior Cleaning</li>
+              <li data-i18n="footer_service3">Oil Change</li>
+              <li data-i18n="footer_service4">Electrical Repair</li>
+              <li data-i18n="footer_service5">Pre-Sale Inspection</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h4 data-i18n="footer_contact_heading">Contact</h4>
+            <ul>
+              <li><a href="tel:+201017437945">+20 (0) 101 7437945</a></li>
+              <li><a href="mailto:mahma123789@gmail.com">mahma123789@gmail.com</a></li>
+              <li data-i18n="footer_address">Obour City, Egypt</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer_copyright">© 2026 Velora Car Care. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="booking-dock" id="bookingPanel" aria-live="polite">
+      <div class="booking-dock-inner">
+        <div class="booking-dock-header">
+          <div class="booking-dock-title">
+            <span class="booking-dock-icon">🧾</span>
+            <div>
+              <h3 data-i18n="booking_dock_title">Your Booking</h3>
+              <p id="bookingDockSubtitle" data-i18n="booking_dock_subtitle_zero">0 services selected</p>
+            </div>
+          </div>
+          <button class="booking-dock-collapse" id="bookingDockCollapse" type="button" aria-label="Collapse booking summary">
+            ▾
+          </button>
+        </div>
+
+        <div class="booking-dock-list" id="cartItems"></div>
+
+        <div class="booking-dock-footer">
+          <div class="booking-dock-total">
+            <span data-i18n="booking_dock_total">Total</span>
+            <strong id="cartTotal">$0</strong>
+          </div>
+          <button class="btn-book-now" id="proceedBooking" type="button" data-i18n="booking_dock_book_now">Book Now</button>
+          <div class="alert-box" id="alertBox" data-i18n="booking_dock_alert">
+            Please select at least one service before booking.
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
